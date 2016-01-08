@@ -1,0 +1,5 @@
+[run]
+include = digestus/*
+omit = *migrations*, *tests*
+plugins =
+    django_coverage_plugin
