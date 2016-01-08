@@ -1,7 +1,7 @@
 digestus
 ==============================
 
-team reporting tool
+open source team reporting tool.
 
 
 LICENSE: BSD
