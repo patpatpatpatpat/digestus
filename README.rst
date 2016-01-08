@@ -1,6 +1,9 @@
 digestus
 ==============================
 
+.. image:: https://travis-ci.org/patpatpatpatpat/digestus.svg?branch=master
+    :target: https://travis-ci.org/patpatpatpatpat/digestus
+
 open source team reporting tool.
 
 
