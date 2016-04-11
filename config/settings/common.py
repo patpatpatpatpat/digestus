@@ -45,6 +45,7 @@ THIRD_PARTY_APPS = (
 LOCAL_APPS = (
     'digestus.users',  # custom users app
     # Your stuff: custom apps go here
+    'updates',
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
