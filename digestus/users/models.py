@@ -8,6 +8,7 @@ from django.utils.encoding import python_2_unicode_compatible
 from django.utils.translation import ugettext_lazy as _
 
 
+
 @python_2_unicode_compatible
 class User(AbstractUser):
 
@@ -20,3 +21,11 @@ class User(AbstractUser):
 
     def get_absolute_url(self):
         return reverse('users:detail', kwargs={'username': self.username})
+
+    def get_teams(self):
+        """
+        Returns all `Team`s where the user is a member.
+        """
+        from updates.models import Team
+
+        return Team.objects.filter(memberships__user_id=self.pk)

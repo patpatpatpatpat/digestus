@@ -26,7 +26,7 @@ class Team(models.Model):
 
 class Membership(models.Model):
     team = models.ForeignKey(Team, related_name='memberships')
-    user = models.ForeignKey(User)
+    user = models.ForeignKey(User, related_name='memberships')
     role = models.CharField(max_length=25)
 
     class Meta:
@@ -34,7 +34,7 @@ class Membership(models.Model):
 
     def __str__(self):
         return '{} - {}'.format(self.team,
-                                self.user.get_full_name())
+                                self.user.name)
 
 
 class Update(models.Model):

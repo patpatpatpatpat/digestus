@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Your Teams</h1>
+
+    <ul>
+        {% for team in object_list %}
+            <li>{{ team }}</li>
+        {% empty %}
+            You do not belong to any team.
+        {% endfor %}
+    </ul>
+
+
+{% endblock content %}

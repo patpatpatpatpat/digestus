@@ -56,6 +56,9 @@
                   <a class="nav-link" href="{% url 'users:detail' request.user.username  %}">{% trans "My Profile" %}</a>
                 </li>
                 <li class="nav-item">
+                  <a class="nav-link" href="{% url 'my_teams' %}">{% trans "My Teams" %}</a>
+                </li>
+                <li class="nav-item">
                   <a class="nav-link" href="{% url 'account_logout' %}">{% trans "Logout" %}</a>
                 </li>
               {% else %}
@@ -105,4 +108,3 @@
     {% endblock javascript %}
   </body>
 </html>
- 
