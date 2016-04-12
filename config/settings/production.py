@@ -53,17 +53,6 @@ ALLOWED_HOSTS = env.list('DJANGO_ALLOWED_HOSTS', default=['example.com'])
 
 INSTALLED_APPS += ("gunicorn", )
 
-# STORAGE CONFIGURATION
-# ------------------------------------------------------------------------------
-
-# Static Assets
-# ------------------------
-# See: https://github.com/antonagestam/collectfast
-# For Django 1.7+, 'collectfast' should come before
-# 'django.contrib.staticfiles'
-AWS_PRELOAD_METADATA = True
-INSTALLED_APPS = ('collectfast', ) + INSTALLED_APPS
-
 # EMAIL
 # ------------------------------------------------------------------------------
 DEFAULT_FROM_EMAIL = env('DJANGO_DEFAULT_FROM_EMAIL',
