@@ -1,0 +1,28 @@
+### List updates with -/+/* ABOVE ###
+
+Take 5 minutes to reflect on your work day.
+
+Reply to this email with a list of your accomplished tasks introduced by a "-", upcoming tasks introduced by a "+" and current problems introduced by a "*"
+
+Enter all updates in backticks. e.g:
+```
+-(space)done
++(space)todo
+*(space)blockers
+```
+{% if previous_todos %}
+  Were these items done?
+  {% for todo_item in previous_todos %}
+  - {{ todo_item }}
+  {% endfor %}
+{% endif %}
+{% if previous_blockers %}
+  Were these blockers addressed?
+  {% for blocker in previous_blockers %}
+  - {{ blocker }}
+  {% endfor %}
+{% endif %}
+
+Tip: You can post status updates whenever and how often you want using your team's email address: {{ team_email }}.
+
+You received this email because you are part of the team {{ team_name }}. To stop receiving reminders, leave the team.

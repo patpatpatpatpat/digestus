@@ -1,0 +1,21 @@
+{{ team.name }}
+
+{{ date }}
+
+{% for member_and_update in members_and_updates %}
+  {{ member_and_update.member }} - {{ member_and_update.role }}
+  {% if member_and_update.update %}
+    {% for done in member_and_update.update.done_as_list %}
+    - {{ done }}
+    {% endfor %}
+    {% for will in member_and_update.update.will_do_as_list %}
+    + {{ will }}
+    {% endfor %}
+    {% for blocker in member_and_update.update.blocker_as_list %}
+    * {{ blocker }}
+    {% endfor %}
+  {% else %}
+    didn't answer
+  {% endif %}
+{% endfor %}
+You received this email because you joined the team {{ team.name }}. To stop receiving digest, please log in and leave the team.

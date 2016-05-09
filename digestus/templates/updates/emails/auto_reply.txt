@@ -1,0 +1,11 @@
+We detected a format error in your update and was NOT able to save your message correctly. Please use the correct format when sending updates via email, or use the platform instead.
+
+Correct Format:
+```
+-(space)done
++(space)todo
+*(space)blockers
+```
+
+YOUR SENT UPDATE:
+{{ email_text }}
