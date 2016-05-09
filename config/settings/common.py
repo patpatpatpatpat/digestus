@@ -234,3 +234,5 @@ BROKER_URL = env("CELERY_BROKER_URL", default='django://')
 ADMIN_URL = r'^admin/'
 
 # Your common stuff: Below this line define 3rd party library settings
+INBOUND_DOMAIN = env('INBOUND_DOMAIN')
+MANDRILL_API_KEY = env('MANDRILL_API_KEY')
